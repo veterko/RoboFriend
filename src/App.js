@@ -1,7 +1,6 @@
 import React from 'react';
 import 'tachyons';
 import CardList from './CardList';
-import {robots} from './robots';
 import SearchBox from './SearchBox';
 import Scroll from './Scroll'
 import './App.css'
@@ -25,7 +24,7 @@ class App extends React.Component
     }
 
     render(){
-        const {robots, searchField} = this.state;
+        const {robots} = this.state;
         const filteredRobots = robots.filter(robot => {return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase())});
         return(
             <div className='tc'>
